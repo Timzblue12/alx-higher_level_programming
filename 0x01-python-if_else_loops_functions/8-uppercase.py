@@ -1,23 +1,7 @@
 #!/usr/bin/python3
-
-def to_uper(character):
-
-    if ord(character) >= 97 and ord(character) <= 122:
-
-        return (ord(character) - 32)
-
-    else:
-
-        return ord(character)
-
-::w
-
-def uppercase(string):
-
-    string_new = ""
-
-    for character in string:
-
-        string_new += "%c" % to_uper(character)
-
-    print("{:s}".format(string_new))
+def uppercase(str):
+    # To Convert ASCII to uppercase: (ord(c) - 32) i.e for a is (97-32) 65 = A.
+    for c in str:
+        uppercase_c = chr(ord(c) - 32) if ord(c) >= 97 and ord(c) <= 122 else c
+        print('{}'.format(uppercase_c), end='')
+    print()
